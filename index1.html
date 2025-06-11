@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="display: flex; justify-content: center;">App 1</h1>
+    <!--  <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Obligot id</th>
+                <th>Tin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>OBG001</td>
+                <td>TIN12345</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>OBG002</td>
+                <td>TIN67890</td>
+            </tr>
+            <tr>
+                <td>Michael Lee</td>
+                <td>OBG003</td>
+                <td>TIN54321</td>
+            </tr>
+            <tr>
+                <td>Emily Clark</td>
+                <td>OBG004</td>
+                <td>TIN98765</td>
+            </tr>
+            <tr>
+                <td>David Kim</td>
+                <td>OBG005</td>
+                <td>TIN11223</td>
+            </tr>
+        </tbody>
+    </table> -->
+    <form id="tinForm" method="POST" action="http://127.0.0.1:5500/index2.html" target="_blank">
+        <input type="hidden" name="tin" value="88888888" />
+    </form>
+    <button id="submitButton" onclick="submitForm()">Submit
+    </button>
+    <script>
+        function submitForm() {
+            alert(1);
+            document.getElementById('tinForm').submit();
+        }
+    </script>
+</body>
+
+</html>
