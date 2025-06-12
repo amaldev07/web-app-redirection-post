@@ -48,11 +48,34 @@
     <form id="tinForm" method="POST" action="http://localhost:3000/api/receive-tin" target="_blank">
         <input type="hidden" name="tin" value="88888888" />
     </form>
-    <button id="submitButton" onclick="submitForm()">Submit
-    </button>
+    <button id="submitButton" onclick="submitForm()">Submit </button>
+    <button id="submitButton" onclick="createAndSubmitForm()">Cerate form automatically and submit </button>
     <script>
         function submitForm() {
             document.getElementById('tinForm').submit();
+        }
+
+        <!-- You can place this script in your HTML file -->
+        function createAndSubmitForm() {
+            // Create form
+            const form = document.createElement('form');
+            form.id = 'tinForm';
+            form.method = 'POST';
+            form.action = 'http://localhost:3000/api/receive-tin';
+            form.target = '_blank';
+
+            // Create hidden input
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'tin';
+            input.value = '88888888';
+            form.appendChild(input);
+
+            // Append form to body
+            document.body.appendChild(form);
+
+            // Submit the form
+            form.submit();
         }
     </script>
 </body>
